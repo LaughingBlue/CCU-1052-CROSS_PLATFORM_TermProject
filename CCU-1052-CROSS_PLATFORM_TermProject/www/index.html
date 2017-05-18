@@ -83,24 +83,6 @@
                     map: map
                 });
             });
-
-            //script.src = 'https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_month.geojsonp';
-            //document.getElementsByTagName('head')[0].appendChild(script);
-        }
-
-        //DELETE
-        function eqfeed_callback(results) {
-            var heatmapData = [];
-            for (var i = 0; i < results.features.length; i++) {
-                var coords = results.features[i].geometry.coordinates;
-                var latLng = new google.maps.LatLng(coords[1], coords[0]);
-                heatmapData.push(latLng);
-            }
-            var heatmap = new google.maps.visualization.HeatmapLayer({
-                data: heatmapData,
-                dissipating: false,
-                map: map
-            });
         }
     </script> 
 
@@ -206,7 +188,6 @@
     <!-- SCRIPTS -->
     <script type="text/javascript" src="cordova.js"></script>
     <script type="text/javascript" src="scripts/platformOverrides.js"></script>
-    <script type="text/javascript" src="scripts/index.js"></script>
-    
+    <script type="text/javascript" src="scripts/index.js"></script>    
 </body>
 </html>
